@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Review;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Session;
+use Intervention\Image\ImageManagerStatic as Image;
 
 class ReviewController extends Controller
 {
@@ -50,6 +52,19 @@ class ReviewController extends Controller
         $review->name=$request->name;
         $review->comment=trim($request->comment);
         $review->companyname=$request->companyname;
+
+        if($request->hasFile('image')) {
+            $image       = $request->file('image');
+            $filename = 'f'.time() . '.' . $image->getClientOriginalName();
+
+            $image_resize = Image::make($image->getRealPath());
+            // $image_resize->resize(2098, 1500);
+            $image_resize->save(public_path('reviewsimage/'.$filename));
+            $review->image=$filename;
+
+            $imageUrl =  asset(('reviewsimage/' . $filename));
+            $review->image_url = $imageUrl;
+        }
         $review->save();
 
         Session::flash('message', 'Review Created Successfully!');
@@ -100,6 +115,25 @@ class ReviewController extends Controller
         $review->name=$request->name;
         $review->comment=trim($request->comment);
         $review->companyname=$request->companyname;
+
+        if($request->hasFile('image')) {
+            $image = $request->file('image');
+
+            $imgage="reviewsimages/".$review->image;
+            if (File::exists($imgage)) {
+                unlink($imgage);
+            }
+
+            $filename = 'f'.time() . '.' . $image->getClientOriginalName();
+
+            $image_resize = Image::make($image->getRealPath());
+            //$image_resize->resize(150, 150);
+            $image_resize->save(public_path('reviewsimages/'.$filename));
+            $review->featuredimage=$filename;
+
+            $imageUrl =  asset(('reviewsimages/' . $filename));
+            $review->image_url = $imageUrl;
+        }
         $review->update();
 
         Session::flash('message', 'Review Updated Successfully!');

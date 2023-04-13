@@ -26,8 +26,8 @@ class PortfolioController extends Controller
 
     public function portfolioList()
     {
-        $portfolios=Portfolio::latest()->get();
-        return view('portfolio.portfolioList',compact('portfolios'));
+        $returnArr['portfolios']=Portfolio::latest()->get();
+        return view('portfolio.portfolioList', $returnArr);
     }
 
     /**
@@ -87,8 +87,12 @@ class PortfolioController extends Controller
             $image_resize->save(public_path('portfolioimages/'.$filename));
             $portfolio->featuredimage=$filename;
 
-
+            $imageUrl =  asset(('portfolioimages/' . $filename));
+            $portfolio->image_url = $imageUrl;
         }
+
+
+
 
         $portfolio->save();
 
@@ -167,7 +171,6 @@ class PortfolioController extends Controller
         $returnArr['tags']= Tag::all();
         $returnArr['portfolio']= Portfolio::findOrfail($id);
         $returnArr['tag']=Tag::all()->pluck('id');
-//        dd($returnArr['portfolio']);
         return view('portfolio.edit',$returnArr);
 
     }
@@ -215,6 +218,9 @@ class PortfolioController extends Controller
                 //$image_resize->resize(150, 150);
                 $image_resize->save(public_path('portfolioimages/'.$filename));
                 $portfolio->featuredimage=$filename;
+
+                $imageUrl =  asset(('portfolioimages/' . $filename));
+                $portfolio->image_url = $imageUrl;
             }
 
             $portfolio->update();

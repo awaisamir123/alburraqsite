@@ -695,6 +695,8 @@
                         </li>
 
 
+
+
                         <li class="site-menu-item has-sub">
                             <a href="{{route('tag.index')}}">
                                 <i class="fas fa-tags site-menu-icon "></i>
@@ -709,6 +711,12 @@
                             </a>
 
                         </li>
+                            <li class="site-menu-item has-sub">
+                                <a href="{{route('service.list')}}">
+                                    <i class="far fa-comments site-menu-icon  " aria-hidden="true"></i>
+                                    <span class="site-menu-title">Services</span>
+                                </a>
+                            </li>
 
                          @endif
 

@@ -131,6 +131,15 @@ Route::group(['prefix' => 'admin',  'middleware' => ['adminAuth','auth']],functi
     Route::post('save-review','\App\Http\Controllers\ReviewController@store')->name('review.store');
     Route::patch('update-review/{id}','\App\Http\Controllers\ReviewController@update')->name('review.update');
 
+
+    Route::get('service-list','\App\Http\Controllers\ServiceController@index')->name('service.list');
+    Route::get('create-service','\App\Http\Controllers\ServiceController@create')->name('service.create');
+    Route::get('edit-service/{id}','\App\Http\Controllers\ServiceController@edit')->name('service.edit');
+    Route::delete('delete-service/{id}','\App\Http\Controllers\ServiceController@destroy')->name('service.destroy');
+    Route::post('save-service','\App\Http\Controllers\ServiceController@store')->name('service.store');
+    Route::patch('update-service/{id}','\App\Http\Controllers\ServiceController@update')->name('service.update');
+
+
     Route::get('portfolio-list','\App\Http\Controllers\PortfolioController@portfolioList')->name('portfolio.list');
     Route::get('create-portfolio','\App\Http\Controllers\PortfolioController@create')->name('portfolio.create');
     Route::post('save-portfolio','\App\Http\Controllers\PortfolioController@store')->name('portfolio.store');
@@ -177,6 +186,9 @@ Route::group(['prefix' => 'admin',  'middleware' => ['adminAuth','auth']],functi
     Route::delete('delete-category/{id}','\App\Http\Controllers\CategoryController@destroy')->name('category.destroy');
     Route::post('save-category','\App\Http\Controllers\CategoryController@store')->name('category.store');
     Route::patch('update-category/{id}','\App\Http\Controllers\CategoryController@update')->name('category.update');
+
+
+
 
 });
 Route::get('sitemap.xml','\App\Http\Controllers\GeneralController@siteMap')->name('siteMap');

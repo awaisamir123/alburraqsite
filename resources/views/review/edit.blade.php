@@ -23,7 +23,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-5" for="email">Name:</label>
                                                 <div class="col-sm-12">
-                                                    <input type="text" class="form-control " name="name" id="name"   required
+                                                    <input type="text" class="form-control " name="name" id="name"  required
                                                     placeholder="Enter Person Name"
                                                            @if(isset($review))
                                                                  value="{{ $review->name }}"
@@ -42,7 +42,7 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-5" for="email">Comapny Name (Optional):</label>
                                                 <div class="col-sm-12">
-                                                    <input type="text" class="form-control " name="companyname" id="companyname" placeholder="Enter Company Name"        
+                                                    <input type="text" class="form-control " name="companyname" id="companyname" placeholder="Enter Company Name"
                                                            @if(isset($review))
                                                                  value="{{ $review->companyname }}"
                                                             @endif>
@@ -60,6 +60,22 @@
 
 
 
+
+                                            <div style="margin-top: 20px" class="form-group">
+                                                <label class="control-label col-sm-5" for="image">Image:</label>
+                                                <div class="col-sm-12">
+                                                    <input type="file" class="form-control" name="image"  id="image" placeholder="Select Image"
+                                                           @if(isset($review))
+                                                           value="{{ $review->image }}"
+                                                        @endif>
+
+                                                    @if ($errors->has('image'))
+                                                        <span style="color: red" class="invalid-feedback" role="alert">
+                                                  <strong>{{ $errors->first('image') }}</strong>
+                                                </span>
+                                                    @endif
+                                                </div>
+                                            </div>
 
 
                                             <div  class="form-group">
