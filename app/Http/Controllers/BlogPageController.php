@@ -13,7 +13,6 @@ class BlogPageController extends Controller
     public function index()
     {
         $returnArr['blogs']=Blog::orderBy('ID', 'DESC')->paginate(6);
-
         return view('blog.index',$returnArr);
     }
 

@@ -1,0 +1,252 @@
+.tp-bullets.tp-thumbs {
+background: transparent;
+}
+.tp-thumbs {
+padding: 0px !important;
+}
+.tp-bullets.tp-thumbs .bullet {
+opacity: 0.8;
+}
+.vc_custom_1454334426978,
+.wpb_revslider_element,
+.header-wiget-area,
+#topbar{
+display: none;
+}
+.tp-bullets, #topbar, #slide-top{
+opacity: 0 !important;
+}
+.show-tool{
+opacity: 1 !important;
+}
+#rev_slider_2_2_wrapper{
+left: 0px !important;
+}
+#header{
+border-bottom:2px solid #999999 !important;
+padding-top: 5px !important;
+padding-bottom: 5px !important;
+}
+.owl-wrapper-outer{
+max-width: 768px
+}
+#content-main{
+margin-top: -7px;
+}
+#header .col-md-8.col-sm-8.col-xs-12{
+margin-top: 23px; } .sf-menu a{
+font-weight: bold;
+font-size: 15px;
+}
+.vc_custom_1454943481584 .vc_column_container:nth-child(2) {
+display: none;
+}
+h1.page-title{
+display: none;
+}
+.is-sticky #header .logo img{
+margin: 6px 0 0px;
+}    .wpb_content_element .wpb_tour_tabs_wrapper .wpb_tabs_nav li, .wpb_content_element .wpb_accordion_wrapper .wpb_accordion_header {
+transition: all 0.2s linear;
+-moz-transition: all 0.2s linear;
+-webkit-transition: all 0.2s linear;
+-o-transition: all 0.2s linear;
+}
+.wpb_content_element .wpb_tour_tabs_wrapper .wpb_tab > .wpb_content_element:last-child, .wpb_content_element .wpb_accordion_wrapper .wpb_accordion_content > .wpb_content_element:last-child, .wpb_content_element .wpb_tour_tabs_wrapper .wpb_tab .wpb_row:last-child > div > div.wpb_wrapper .wpb_content_element:last-child, .wpb_content_element .wpb_accordion_wrapper .wpb_accordion_content .wpb_row:last-child > div > div.wpb_wrapper .wpb_content_element:last-child {
+margin-bottom: 0;
+} .wpb_content_element.wpb_tabs .wpb_tour_tabs_wrapper .wpb_tab {
+background-color: #fff;
+border: 1px solid #ddd;
+border-width: 0 1px 1px 1px;
+border-radius: 0 0 4px 4px;
+}
+.wpb_tabs .wpb_tabs_nav {
+background: #f4f4f4;
+border: 1px solid #ddd;
+border-radius: 4px 4px 0 0;
+}
+.wpb_tabs .wpb_tabs_nav li {
+float: left;
+margin: 0;
+border: none;
+}
+.wpb_content_element .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+background: #fff;
+border: none;
+}
+.wpb_content_element .wpb_tour_tabs_wrapper .wpb_tabs_nav a {
+border-right: 1px solid #ddd;
+border-bottom: 3px solid transparent;
+text-decoration: none;
+display: block;
+padding: 1em 1.5em;
+background: #f4f4f4;
+border-radius: 0;
+font-weight: bold;
+color: #060606;
+}
+.wpb_content_element .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+color: #555555;
+border-bottom: 3px solid #ddd;
+border-radius: 0;
+background: #fff;
+} .wpb_tour .wpb_tabs_nav {
+float: left;
+width: 31.666666666666668%;
+background: #f4f4f4;
+border: 1px solid #ddd;
+border-width: 1px 1px 0 1px;
+border-radius: 4px 0 0 4px;
+}
+.wpb_tour .wpb_tabs_nav li {
+margin: 0 !important;
+background: transparent;
+border: none;
+}
+.wpb_tour .wpb_tabs_nav li a {
+border-right: 3px solid transparent !important;
+border-bottom: 1px solid #ddd !important;
+background: #f4f4f4;
+border-radius: 0;
+font-weight: bold;
+color: #060606;
+}
+.wpb_tour .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+background: #fff;
+color: #555555;
+border-right: 3px solid #ddd !important;
+border-bottom: 1px solid #ddd !important;
+border-radius: 0;
+background: #fff;
+}
+.wpb_tour_next_prev_nav {
+display: none;
+} .wpb_toggle, h4.wpb_toggle {
+background: none;
+padding-left: 0;
+clear: both;
+margin-top: 0;
+font-size: 20px;
+font-weight: normal;
+margin-bottom: 15px !important;
+border-bottom: 1px solid #e0e0e0;
+padding-bottom: 15px !important;
+}
+h4.wpb_toggle:before {
+margin-right: 15px;
+background: transparent;
+color: #d5d5d5;
+border: 3px solid #d5d5d5;
+-webkit-border-radius: 100%;
+-moz-border-radius:    100%;
+border-radius:         100%;
+font-family: 'icomoon';
+content: "\ed09";
+font-size: 20px;
+line-height: 20px;
+padding: 7px;
+display: inline-block;
+}
+.wpb_toggle_title_active, h4.wpb_toggle_title_active {
+background: none;
+}
+h4.wpb_toggle_title_active:before {
+font-family: 'icomoon';
+content: "\ed0a";
+color: #cc0027;
+}
+.wpb_toggle_content {
+padding: 0 0 0 55px;
+} .wpb_content_element .wpb_accordion_wrapper .wpb_accordion_header {
+background-color: transparent !important;
+}
+.wpb_accordion_wrapper h3, .wpb_accordion_wrapper h3 a, .wpb_toggle {
+font-size: 20px !important;
+}
+.wpb_accordion_wrapper h3 a {
+margin-left: 60px;
+padding: 0 !important;
+}
+.wpb_accordion_wrapper h3 {
+margin-bottom: 13px !important;
+border-bottom: 1px solid #e0e0e0;
+padding-bottom: 15px !important;
+}
+.wpb_accordion .wpb_accordion_wrapper .ui-state-default .ui-icon, .wpb_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon {
+background: none;
+width: auto;
+height: auto;
+top: .1em;
+position: absolute;
+left: 0;
+}
+.wpb_accordion .wpb_accordion_wrapper .ui-state-default .ui-icon {
+cursor: pointer;
+background: transparent;
+color: #d5d5d5;
+width: 40px;
+height: 40px;
+border: 3px solid #d5d5d5;
+-webkit-border-radius: 100%;
+-moz-border-radius:    100%;
+border-radius:         100%;
+margin-top: -5px;
+}
+.wpb_accordion .wpb_accordion_wrapper .ui-state-default .ui-icon:before {
+font-family: 'icomoon';
+content: "\ed09";
+padding-left: 7px;
+line-height: 36px;
+}
+.wpb_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon {
+background: none;
+}
+.wpb_accordion .wpb_accordion_wrapper .ui-state-active .ui-icon:before {
+font-family: 'icomoon';
+content: "\ed0a";
+line-height: 34px;
+color: #cc0027;
+}
+.wpb_content_element .wpb_accordion_wrapper .wpb_accordion_content {
+padding: 10px 20px 20px 60px
+} .wpb_heading, .entry-content .wpb_heading {
+font-size: 18px;
+}
+.wpb_row {
+margin-bottom: 0;
+}
+.fullwidth-row, .fullwidth-row .wpb_row {
+margin-bottom: 0;
+}
+ul.wpb_thumbnails-fluid > li, .last_toggle_el_margin, .wpb_button {
+margin-bottom: 0;
+}
+.wpb_content_element, .wpb_custom_element {
+margin-bottom: 20px;
+} .wpb_pinterest_type_vertical {
+height: 60px;
+margin-top: 40px;
+}
+.tp-thumbcontainer .bullet:nth-child(1){
+background-image: url(http://al-burraq.com/wp-content/uploads/revslider/home-biz/thumb-11.png) !important;
+}
+.tp-thumbcontainer .bullet:nth-child(2){
+background-image: url(http://al-burraq.com/wp-content/uploads/revslider/home-biz/thumb-22.png) !important;
+}  @media only screen and (max-width: 767px) {
+.vc_responsive div.vc_row-fluid div[class*="vc_span"] {
+margin-bottom: 20px;
+}
+#header .col-md-8.col-sm-8.col-xs-12{
+margin-top: 0px;
+}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.vc_responsive div.vc_row-fluid div[class*="vc_span"] {
+margin-bottom: 20px;
+}
+#header .col-md-8.col-sm-8.col-xs-12{
+margin-top: 0px;
+}
+}   @media (max-width: 767px) {
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product, .woocommerce .related ul li.product, .woocommerce .related ul.products li.product, .woocommerce .upsells.products ul li.product, .woocommerce .upsells.products ul.products li.product, .woocommerce-page .related ul li.product, .woocommerce-page .related ul.products li.product, .woocommerce-page .upsells.products ul li.product, .woocommerce-page .upsells.products ul.products li.product { width:48%; margin:0 0 2.992em }
+}

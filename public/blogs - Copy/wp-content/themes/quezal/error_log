@@ -1,0 +1,29 @@
+[02-Apr-2016 08:50:39 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 5
+[02-Apr-2016 08:52:35 UTC] PHP Warning:  include(../../wp-load.php): failed to open stream: No such file or directory in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 2
+[02-Apr-2016 08:52:35 UTC] PHP Warning:  include(): Failed opening '../../wp-load.php' for inclusion (include_path='.:/opt/alt/php55/usr/share/pear:/opt/alt/php55/usr/share/php') in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 2
+[02-Apr-2016 08:52:35 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 6
+[02-Apr-2016 09:44:14 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 29
+[02-Apr-2016 09:44:25 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 29
+[02-Apr-2016 10:02:37 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 28
+[02-Apr-2016 10:02:49 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 28
+[02-Apr-2016 10:04:51 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 30
+[02-Apr-2016 10:08:51 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 77
+[02-Apr-2016 10:08:58 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 77
+[02-Apr-2016 10:09:37 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 77
+[02-Apr-2016 10:09:42 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 77
+[02-Apr-2016 10:10:27 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 77
+[02-Apr-2016 10:11:41 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 77
+[02-Apr-2016 10:13:11 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 77
+[02-Apr-2016 10:16:32 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 77
+[02-Apr-2016 10:16:35 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 77
+[02-Apr-2016 10:16:40 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 77
+[02-Apr-2016 10:17:19 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 78
+[02-Apr-2016 10:17:23 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 78
+[02-Apr-2016 10:18:48 UTC] PHP Fatal error:  Call to a member function the_post() on a non-object in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 17
+[02-Apr-2016 10:21:53 UTC] PHP Fatal error:  Call to a member function the_post() on a non-object in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 17
+[02-Apr-2016 10:22:27 UTC] PHP Fatal error:  Call to a member function the_post() on a non-object in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 17
+[02-Apr-2016 10:22:51 UTC] PHP Fatal error:  Call to a member function the_post() on a non-object in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 17
+[02-Apr-2016 10:23:43 UTC] PHP Fatal error:  Call to a member function the_post() on a non-object in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 17
+[02-Apr-2016 10:24:28 UTC] PHP Fatal error:  Call to a member function the_post() on a non-object in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 17
+[02-Apr-2016 10:32:01 UTC] PHP Parse error:  syntax error, unexpected '10' (T_LNUMBER) in /home/waqasmalik10/public_html/wp-content/themes/quezal/potfolio_ajax.php on line 21
+[10-Jun-2016 02:36:58 UTC] PHP Fatal error:  Call to undefined function language_attributes() in /home/waqasmalik10/public_html/wp-content/themes/quezal/404.php on line 11

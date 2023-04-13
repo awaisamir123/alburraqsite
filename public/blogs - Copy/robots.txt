@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wordpress-plugin-development/
+Disallow: /web-design-development/
+Disallow: /testimonial-items/mariam-abuiteiwi/
+Disallow: /the-3-steps-that-could-take-a-blind-deaf-dumb-newbie-entrepreneur-to-a-million-dollars-in-12-months/
+
+Allow: /wp-admin/admin-ajax.php

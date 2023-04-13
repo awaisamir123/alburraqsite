@@ -1,0 +1,188 @@
+** QUEZAL **
+** Keep backup if you have made changes to theme files itself. 
+** Use child theme for customizations
+** Keep backup (export) of revolution sliders as these get deleted if plugin is deleted.
+
+** Easiest way to update theme : Replace complete theme folder (if havn't made any changes in theme folder itself) 
+Refer Online Help Document for more info
+
+** Once you update theme, you will get latest compatible versions of plugins too.
+Where are pre-packaged plugins in theme folder? - Refer Online Help Document for more info.
+
+
+*-------------------------------------------------------------------*
+Notes while updating theme to latest version
+*-------------------------------------------------------------------*
+- Please check change log. 
+- Update Theme: How to? - Refer help Doc
+- Update all bundled plugins - Visual Composer / Revolution Slider / TCSN-QZ-Shortcodes : How to? - Refer help Doc
+
+***** ********* ***** 
+***** IMPORTANT - Please Read ***** -----------------------------------------------------------------------------
+***** ********* ***** 
+
+If you have theme version v2.0.6 or older and updating to v2.0.7 or above
+
+*-------------------------------------------------------------------*
+FOOTER and SLIDE PANEL Sidebar ID correction with respect to WP 4.2 compatibility
+*-------------------------------------------------------------------*
+
+Please drag your FOOTER COLUMNS  and SLIDE PANEL COLUMNS widgets to some other sidebar before theme update. 
+
+Just to be on safer side, in case they do not move as inactive sidebar. Then it will need to just drag widgets back. 
+Refresh 'appearance >  widgets' page before dragging.
+Make sure to do this, otherwise it will need to insert these widgets again.
+ 
+  
+
+---------------------------
+|      Changelog           |        
+---------------------------
+
+** ----- 18 June 2015 - v2.1.1 ----- **
+
+- Fix : Pinterest share
+
+Files Changed:
+- style.css
+- functions.php
+- theme folder / includes / templates / social-share.php
+
+** ----- 16 June 2015 - v2.1.0 ----- **
+
+- Fix: XSS-vulnerability fix prettyPhoto
+- Removed : vc_row.php 
+- Updated: Visual Composer Plugin
+- Updated: Revolution Slider Plugin
+- Fix : Pinterest share
+
+Files Changed:
+- style.css
+- functions.php
+- theme folder / js / theme-scripts.js
+- theme folder / includes / templates / social-share.php
+
+** ----- 8 May 2015 - v2.0.10 ----- **
+
+Fix for theme version v2.0.8 / v 2.0.9
+Again some fix for backward compatibility.
+Those who have updated theme to v2.0.8 / v2.0.9 may have fullwidth row structure quite odd. Please update vc_row.php
+
+
+Files changed:
+- Theme folder / vc_templates / vc_row.php
+- style.css
+- functions.php
+
+
+
+** ----- 6 May 2015 - v2.0.9 ----- **
+
+Fix for theme version v2.0.8
+Those who have updated theme to v2.0.8 may have fullwidth row structure quite odd. Please update vc_row.php
+
+
+Files changed:
+- Theme folder / vc_templates / vc_row.php
+- style.css
+- functions.php
+
+** ----- 5 May 2015 - v2.0.8 ----- **
+- Updated: Visual Composer Plugin
+- Updated: Revolution Slider Plugin
+
+Files changed:
+- Theme folder / page-builder / remove-params-elements.php 
+- Theme folder / includes / tgm-plugin-activation.php
+- style.css
+- functions.php
+
+** ----- 27.April.15 - v2.0.7 ----- **
+
+- Fix : FOOTER and SLIDE PANEL Sidebar ID correction 
+- Fix: XSS-vulnerability fix for TGM Plugin Activation class
+- Updated: Visual composer Plugin
+- Updated: Revolution Slider Plugin
+
+
+Files changed:
+- style.css
+- functions.php
+- Theme folder / includes / widgets / sidebar.php
+- Theme folder / includes/ tgm-plugin-activation.php
+- Theme folder / includes / page-builder / remove-params-elements.php
+- Removed add-param.php : Theme folder / includes / page-builder / add-param.php
+- Theme folder / vc_templates / vc_row.php
+- 404.php
+- header.php
+- template-blank.php
+
+
+** ----- 05.Feb.15 - v2.0.6 ----- **
+- Fix : WooCommerce - extra enqueued CSS files removed
+- Updated: Visual composer
+- New : custom-override.css (css > custom-override.css)
+
+Files changed:
+functions.php
+css > iconfont.css
+includes > page-builder > remove-params-elements.php
+
+
+** ----- 20.12.14 - v2.0.5 ----- **
+- Compatibility with WooCommerce 2.3
+
+Files changed:
+woocommerce.css
+woocommerce.php
+functions.php
+style.css
+
+
+** ----- 20.12.14 - v2.0.4 ----- **
+- Updated : Visual Composer Plugin
+- Updated: Revolution Slider Plugin
+
+
+** ----- 26.10.14 - v2.0.3
+ ----- **
+- Fix: Title in Page Header for Custom Post Types.
+- Fix: Retina Logo
+- Fix: Page Title
+
+Files changed:
+- functions.php
+- single-tcsn_portfolio.php
+- single-tcsn_team.php
+- single-tcsn_testimonial.php
+- includes > custom-styles.php
+- includes > options-config.php
+- includes > templates > headers > page-header.php
+- style.css
+- css > woocommerce.css
+- template-blank
+
+
+** ----- 23.09.14 - v2.0.2
+ ----- **
+- Updated integrated files for woocommerece
+
+
+** ----- 23.09.14 - v2.0.1
+ ----- **
+- Updated integrated files for woocommerece
+
+
+
+** ----- 10.09.14 - v2.0.0
+ ----- **
+- New: Theme is now Compatible with WooCommerce
+- Fixed missing links for post format archive
+- Fixed styles for button hover
+- New: Option to add only icon button in button shortcode (via. TCSN-QZ-Shortcodes Plugin)
+- New: Social Share for single posts
+- Updated child theme
+
+
+** ----- Initial Release
+ ----- **

@@ -97,7 +97,7 @@ Route::get('/services/ios-development','\App\Http\Controllers\ServicesPageContro
 Route::get('/services/python-development','\App\Http\Controllers\ServicesPageController@pythonDevelopment')->name('services.pythondevelopment');
 Route::get('/services/digital-marketing','\App\Http\Controllers\ServicesPageController@digitalMarketing')->name('services.digitalmarketing');
 //Blog
-Route::resource('blogs','BlogPageController');
+Route::resource('blogs','\App\Http\Controllers\BlogPageController');
 
 
 

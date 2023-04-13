@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta name="description" content="bootstrap admin template">
+  <meta name="author" content="">
+  <title> | Remark Admin Template</title>
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../global/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../global/css/bootstrap-extend.min.css">
+  <link rel="stylesheet" href="../assets/css/site.min.css">
+  <!-- Plugins -->
+  <link rel="stylesheet" href="../global/vendor/animsition/animsition.css">
+  <link rel="stylesheet" href="../global/vendor/asscrollable/asScrollable.css">
+  <link rel="stylesheet" href="../global/vendor/switchery/switchery.css">
+  <link rel="stylesheet" href="../global/vendor/intro-js/introjs.css">
+  <link rel="stylesheet" href="../global/vendor/slidepanel/slidePanel.css">
+  <link rel="stylesheet" href="../global/vendor/flag-icon-css/flag-icon.css">
+  <link rel="stylesheet" href="../global/vendor/waves/waves.css">
+  <link rel="stylesheet" href="../assets/examples/css/forms/layouts.css">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="../global/fonts/material-design/material-design.min.css">
+  <link rel="stylesheet" href="../global/fonts/brand-icons/brand-icons.min.css">
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
+  <link rel="apple-touch-icon" href="../../assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="../global/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../global/css/bootstrap-extend.min.css">
+  <link rel="stylesheet" href="../assets/css/site.min.css">
+  <!-- Plugins -->
+  <link rel="stylesheet" href="../global/vendor/animsition/animsition.css">
+  <link rel="stylesheet" href="../global/vendor/asscrollable/asScrollable.css">
+  <link rel="stylesheet" href="../global/vendor/switchery/switchery.css">
+  <link rel="stylesheet" href="../global/vendor/intro-js/introjs.css">
+  <link rel="stylesheet" href="../global/vendor/slidepanel/slidePanel.css">
+  <link rel="stylesheet" href="../global/vendor/flag-icon-css/flag-icon.css">
+  <link rel="stylesheet" href="../global/vendor/waves/waves.css">
+  <link rel="stylesheet" href="../global/vendor/tablesaw/tablesaw.css">
+   <link rel="stylesheet" href="../assets/examples/css/pages/user.css">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="../global/fonts/material-design/material-design.min.css">
+  <link rel="stylesheet" href="../global/fonts/brand-icons/brand-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--[if lt IE 9]>
+    <script src="../../../global/vendor/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+  <!--[if lt IE 10]>
+    <script src="../../../global/vendor/media-match/media.match.min.js"></script>
+    <script src="../../../global/vendor/respond/respond.min.js"></script>
+    <![endif]-->
+  <!-- Scripts -->
+  <script src="../global/vendor/breakpoints/breakpoints.js"></script>
+  <script>
+  Breakpoints();
+  </script>
+  <style>
+  .site-menubar{padding-bottom: 84px !important;}
+  </style>
+</head>
+<body class="animsition site-navbar-small ">
+  <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega navbar-inverse"
+  role="navigation">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggler hamburger hamburger-close navbar-toggler-left hided"
+      data-toggle="menubar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-collapse"
+      data-toggle="collapse">
+        <i class="icon md-more" aria-hidden="true"></i>
+      </button>
+      <div class="navbar-brand navbar-brand-center site-gridmenu-toggle" data-toggle="gridmenu">
+        <img class="navbar-brand-logo" src="../assets/images/logo.png" title="Remark">
+        <span class="navbar-brand-text hidden-xs-down"> Remark</span>
+      </div>
+      <button type="button" class="navbar-toggler collapsed" data-target="#site-navbar-search"
+      data-toggle="collapse">
+        <span class="sr-only">Toggle Search</span>
+        <i class="icon md-search" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div class="navbar-container container-fluid">
+      <!-- Navbar Collapse -->
+      <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
+        <!-- Navbar Toolbar -->
+        <ul class="nav navbar-toolbar">
+          <li class="nav-item hidden-float" id="toggleMenubar">
+            <a class="nav-link" data-toggle="menubar" href="#" role="button">
+              <i class="icon hamburger hamburger-arrow-left">
+                  <span class="sr-only">Toggle menubar</span>
+                  <span class="hamburger-bar"></span>
+                </i>
+            </a>
+          </li>
+          
+          <li class="nav-item dropdown dropdown-fw dropdown-mega">
+           </li>
+        </ul>
+        <!-- End Navbar Toolbar -->
+        <!-- Navbar Toolbar Right -->
+        <ul class="nav navbar-toolbar navbar-right navbar-toolbar-right">
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link navbar-avatar" data-toggle="dropdown" href="#" aria-expanded="false"
+            data-animation="scale-up" role="button">
+              <span class="avatar avatar-online">
+                <img src="../global/portraits/5.jpg" alt="...">
+                <i></i>
+              </span>
+            </a>
+            <div class="dropdown-menu" role="menu">
+              <a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon md-account" aria-hidden="true"></i> Profile</a>
+              <a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon md-card" aria-hidden="true"></i> Billing</a>
+              <a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon md-settings" aria-hidden="true"></i> Settings</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="javascript:void(0)" role="menuitem"><i class="icon md-power" aria-hidden="true"></i> Logout</a>
+            </div>
+          </li>
+          
+        </ul>
+        <!-- End Navbar Toolbar Right -->
+      </div>
+      <!-- End Navbar Collapse -->
+      <!-- Site Navbar Seach -->
+      <div class="collapse navbar-search-overlap" id="site-navbar-search">
+        <form role="search">
+          <div class="form-group">
+            <div class="input-search">
+              <i class="input-search-icon md-search" aria-hidden="true"></i>
+              <input type="text" class="form-control" name="site-search" placeholder="Search...">
+              <button type="button" class="input-search-close icon md-close" data-target="#site-navbar-search"
+              data-toggle="collapse" aria-label="Close"></button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- End Site Navbar Seach -->
+    </div>
+  </nav>
+  <div class="site-menubar">
+    <div class="site-menubar-body">
+      <div>
+        <div>
+          <ul class="site-menu" data-plugin="menu">
+            <li class="site-menu-category">General</li>
+            <li class="site-menu-item has-sub">
+              <a href="companies.html" dropdown-badge="false" style="text-align:center;">
+                <i class="fa fa-building" aria-hidden="true"></i>
+                <span class="site-menu-title">Companies</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="cards.html" dropdown-badge="false"  style="text-align:center;">
+                <i class="fa fa-building" aria-hidden="true"></i>
+                <span class="site-menu-title">Cards</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+            
+            </li>
+            <li class="site-menu-category">Elements</li>
+            <li class="site-menu-item has-sub">
+              <a href="reports.html" dropdown-badge="false"  style="text-align:center;">
+                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                <span class="site-menu-title">Reports</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="quizzes.html" dropdown-badge="false" style="text-align:center;">
+                <i class="fa fa-question-circle" aria-hidden="true"></i>
+                <span class="site-menu-title">Quizzes</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="#" dropdown-badge="false" style="text-align:center;">
+                <i class="fa fa-tasks" aria-hidden="true"></i>
+                <span class="site-menu-title">Quiz Assignments</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              
+            </li>
+            <li class="site-menu-item has-sub">
+              <a href="#" dropdown-badge="false" style="text-align:center;">
+                <i class="fa fa-cogs" aria-hidden="true"></i>	
+                <span class="site-menu-title">Modules</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              
+            </li>
+			<li class="site-menu-item has-sub">
+              <a href="#" dropdown-badge="false"  style="text-align:center;">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span class="site-menu-title">Lam Rewards Admin</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              
+            </li>
+			<li class="site-menu-item has-sub">
+              <a href="#" dropdown-badge="false" style="text-align:center;">
+               <i class="fa fa-bullhorn" aria-hidden="true"></i>
+                <span class="site-menu-title">Communications</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              
+            </li>
+			<li class="site-menu-item has-sub">
+              <a href="#" dropdown-badge="false" style="text-align:center;">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                <span class="site-menu-title">Offline Card Scheduler</span>
+                <span class="site-menu-arrow"></span>
+              </a>
+              
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Page -->
+  <div class="page">
+    <div class="page-header">
+      <h1 class="page-title">Quizzes</h1>
+      
+      
+    </div>
+    <div class="page-content">
+      
+  
+     
+      <!-- Panel Controls Sizing -->
+      <div class="panel">
+        <div class="panel-heading">
+         
+        </div>
+        <div class="panel-body container-fluid">
+          <div class="row row-lg">
+		  <div class="col-md-12">
+              <!-- Example Select Sizing -->
+             <div class="panel">
+
+            <div class="panel-body">
+              <table class="tablesaw table-hover table-bordered" data-tablesaw-mode="swipe" data-tablesaw-minimap>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th data-tablesaw-priority="persist">Title</th>
+                    <th>Body</th>
+                    <th>Date Created</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>1</a></th>
+                    <td>Add Steps to Your Weight Loss</td>
+                    <td>...If you’d like to take up walking, but can’t find the extra time to ...</td>
+                    <td>02/20/2012</td>
+                    
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>Add Steps to Your Weight Loss</td>
+                    <td>...If you’d like to take up walking, but can’t find the extra time to ...</td>
+                    <td>02/20/2012</td>
+                  </tr>
+				  <tr>
+                    <th>3</th>
+                    <td>Add Steps to Your Weight Loss</td>
+                    <td>...If you’d like to take up walking, but can’t find the extra time to ...</td>
+                    <td>02/20/2012</td>
+                  </tr>
+				  <tr>
+                    <th>4</th>
+                    <td>Add Steps to Your Weight Loss</td>
+                    <td>...If you’d like to take up walking, but can’t find the extra time to ...</td>
+                    <td>02/20/2012</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+			
+    <div class="page-content" >
+      <!-- Panel -->
+      <div class="panel" style="border:1px solid #eee;"	>
+        <div class="panel-body">
+          
+          <div class="nav-tabs-horizontal nav-tabs-animate" data-plugin="tabs">
+            
+            
+            <div class="tab-content">
+              <div class="tab-pane animation-fade active" id="article" role="tabpanel">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="media">
+                      
+                      <div class="media-body">
+                        <div class="media-body">
+                         <h3 class="example-title" style="margin-top:40px;">Update Quiz</h3>
+						 <br>
+						<h5>Title</h5> 
+						<input type="text" class="form-control form-control-lg" value="Avoid Gum Disease and Save Your Teeth">
+						<h5>Article</h5> 
+						<textarea class="form-control form-control-lg" rows="10">Proper dental care is often ignored until problems arise.  Often, the remedy to those problems lies in a dentist’s office in the form of a drill. 
+
+The most common dental problems that can lead to tooth decay and loss are gingivitis and periodontal disease.  They can be distinguished by the following characteristics:
+
+Gingivitis is characterized by inflamed, irritated gums that are swollen and prone to bleeding. Bad breath and an unpleasant taste in the mouth are common.
+Periodontal Disease occurs when the inner layer of the gum pulls away from the teeth and forms pockets that may become infected. Eventually the pockets deepen. More gum tissue and bone are destroyed. When there isn’t enough to anchor teeth, they loosen and fall out.
+ 
+
+Most people can keep gums healthy by daily brushing and flossing and two professional cleanings a year. Gingivitis can often be reversed with professional cleaning, daily brushing, and flossing.
+
+Periodontal Disease requires additional treatment that may include scraping plaque and tartar from above and below the gum line, smoothing rough spots on the tooth root where bacteria collect, or lifting back the gums to remove tartar.
+
+A dentist or periodontist can provide treatments that will help you keep your teeth. With proper care, they will last a lifetime!</textarea>
+						
+						   
+						
+						
+                    </div>
+                    </div>
+                  </li>
+                 
+                  
+                   
+                                  </ul>
+                <nav>
+                  <ul data-plugin="paginator" data-total="50" data-skin="pagination-no-border"></ul>
+                </nav>
+              </div>
+              <div class="tab-pane animation-fade" id="question1" role="tabpanel">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="media">
+                      
+                      <div class="media-body">
+                        <div class="media-body">
+                         <h4 class="example-title" style="margin-top:40px;">Update Quiz</h4>
+						 <br>
+						<h5>Question q1</h5>
+						<input type="text" class="form-control form-control-lg" value="What can lead to tooth decay and loss?">
+						<h5>Answer 1</h5> 
+						<input type="text" class="form-control form-control-lg" value="Pedirontal disease">
+						<h5>Answer 2</h5> 
+						<input type="text" class="form-control form-control-lg" value="Periodontal disease">
+						<h5>Answer 3</h5> 
+						<input type="text" class="form-control form-control-lg" value="Pepiodontal disease">
+						<h5>Answer 4</h5> 
+						<input type="text" class="form-control form-control-lg" value="Ponidontal  disease">
+						<h5>Correct Answer </h5> 
+						<select class="form-control form-control-lg">
+							<option value="">Answer 1</option>
+							<option value="" selected="selected">Answer 2</option>
+							<option value="">Answer 3</option>
+							<option value="">Answer 4</option>
+						</select>
+						
+						
+						   
+						
+						
+                    </div>
+                    </div>
+                  </li>
+                 
+                  
+                   
+                                  </ul>
+                
+                <nav>
+                  <ul data-plugin="paginator" data-total="50" data-skin="pagination-no-border"></ul>
+                </nav>
+              </div>
+              <div class="tab-pane animation-fade" id="question2" role="tabpanel">
+                <ul class="list-group">
+                  <li class="list-group-item">
+                    <div class="media">
+                      
+                      <div class="media-body">
+                        <div class="media-body">
+                         <h4 class="example-title" style="margin-top:40px;">Update Quiz</h4>
+						 <br>
+						  <br>
+						<h5>Question q1</h5>
+						<input type="text" class="form-control form-control-lg" value="What can lead to tooth decay and loss?">
+						<h5>Answer 1</h5> 
+						<input type="text" class="form-control form-control-lg" value="Pedirontal disease">
+						<h5>Answer 2</h5> 
+						<input type="text" class="form-control form-control-lg" value="Periodontal disease">
+						<h5>Answer 3</h5> 
+						<input type="text" class="form-control form-control-lg" value="Pepiodontal disease">
+						<h5>Answer 4</h5> 
+						<input type="text" class="form-control form-control-lg" value="Ponidontal  disease">
+						<h5>Correct Answer </h5> 
+						<select class="form-control form-control-lg">
+							<option value="">Answer 1</option>
+							<option value="" selected="selected">Answer 2</option>
+							<option value="">Answer 3</option>
+							<option value="">Answer 4</option>
+						</select>
+						
+						
+                    </div>
+                    </div>
+                  </li>
+                 
+                  
+                   
+                                  </ul>
+                
+                <nav>
+                  <ul data-plugin="paginator" data-total="50" data-skin="pagination-no-border"></ul>
+                </nav>
+              </div>
+            </div>
+			<ul class="nav nav-tabs nav-tabs-line" role="tablist">
+              <li class="nav-item" role="presentation"><a class="active nav-link" data-toggle="tab" href="#article"
+                aria-controls="all_contacts" role="tab">Article</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" data-toggle="tab" href="#question1" aria-controls="question1"
+                role="tab">Question 1</a></li>
+              <li class="nav-item" role="presentation"><a class="nav-link" data-toggle="tab" href="#question2" aria-controls="question2"
+                role="tab">Question 2</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Panel -->
+    </div>
+  </div>
+  <!-- End Page -->
+  <!-- Footer -->
+  
+ 
+          </div>
+              <!-- End Example Select Sizing -->
+            </div>
+            <!-- End Example Horizontal Form Label Sizing -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Panel Controls Sizing -->
+      
+    </div>
+  </div>
+  <!-- End Page -->
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-legal">© 2017 <a href="http://themeforest.net/item/remark-responsive-bootstrap-admin-template/11989202">Remark</a></div>
+    <div class="site-footer-right">
+      Crafted with <i class="red-600 icon md-favorite"></i> by <a href="http://themeforest.net/user/amazingSurge">amazingSurge</a>
+    </div>
+  </footer>
+  <!-- Core  -->
+  <script src="../global/vendor/babel-external-helpers/babel-external-helpers.js"></script>
+  <script src="../global/vendor/jquery/jquery.js"></script>
+  <script src="../global/vendor/tether/tether.js"></script>
+  <script src="../global/vendor/bootstrap/bootstrap.js"></script>
+  <script src="../global/vendor/animsition/animsition.js"></script>
+  <script src="../global/vendor/mousewheel/jquery.mousewheel.js"></script>
+  <script src="../global/vendor/asscrollbar/jquery-asScrollbar.js"></script>
+  <script src="../global/vendor/asscrollable/jquery-asScrollable.js"></script>
+  <script src="../global/vendor/waves/waves.js"></script>
+  <!-- Plugins -->
+  <script src="../global/vendor/switchery/switchery.min.js"></script>
+  <script src="../global/vendor/intro-js/intro.js"></script>
+  <script src="../global/vendor/screenfull/screenfull.js"></script>
+  <script src="../global/vendor/slidepanel/jquery-slidePanel.js"></script>
+  <script src="../global/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+  <script src="../global/vendor/slidepanel/jquery-slidePanel.js"></script>
+  <script src="../global/vendor/tablesaw/tablesaw.jquery.js"></script>
+  <!-- Scripts -->
+  <script src="../global/js/State.js"></script>
+  <script src="../global/js/Component.js"></script>
+  <script src="../global/js/Plugin.js"></script>
+  <script src="../global/js/Base.js"></script>
+  <script src="../global/js/Config.js"></script>
+  <script src="../assets/js/Section/Menubar.js"></script>
+  <script src="../assets/js/Section/Sidebar.js"></script>
+  <script src="../assets/js/Section/PageAside.js"></script>
+  <script src="../assets/js/Plugin/menu.js"></script>
+  <script src="../global/js/config/colors.js"></script>
+  <script src="../assets/js/config/tour.js"></script>
+  <script>
+  Config.set('assets', '../../assets');
+  </script>
+  <script src="../assets/js/Site.js"></script>
+  <script src="../global/js/Plugin/asscrollable.js"></script>
+  <script src="../global/js/Plugin/slidepanel.js"></script>
+  <script src="../global/js/Plugin/switchery.js"></script>
+  <script src="../global/js/Plugin/jquery-placeholder.js"></script>
+   <script src="../global/js/Plugin/tablesaw.js"></script>
+  <script>
+  (function(document, window, $) {
+    'use strict';
+    var Site = window.Site;
+    $(document).ready(function() {
+      Site.run();
+    });
+  })(document, window, jQuery);
+  </script>
+  
+</body>
+</html>
