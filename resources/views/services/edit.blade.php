@@ -71,11 +71,10 @@
                                                 </div>
 
                                             </div>
-
                                             <div class="form-group">
                                                 <label class="control-label col-sm-5" for="email"> Thumbnail:</label>
                                                 <div class="col-sm-12">
-                                                    <input type="file" class="form-control " name="thumbnail"  id="thumbnail" placeholder="Select  Thumbnail" required>
+                                                    <input type="file" class="form-control" name="thumbnail"  id="thumbnail" placeholder="Select  Thumbnail" value="{{ old('thumbnail',$service->thumbnail) }}">
                                                     @if ($errors->has('thumbnail'))
                                                         <span style="color: red" class="invalid-feedback" role="alert">
                                                   <strong>{{ $errors->first('thumbnail') }}</strong>
