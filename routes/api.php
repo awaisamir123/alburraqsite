@@ -23,5 +23,7 @@ Route::get('/portfolio/{category?}','\App\Http\Controllers\API\PortfolioControll
 Route::get('/portfolio/{title}/{id}','\App\Http\Controllers\API\PortfolioController@detail');
 Route::get('/our-talent-showcase','\App\Http\Controllers\API\PortfolioController@talentsIndex');
 Route::post('/message','\App\Http\Controllers\API\MessageController@message');
+Route::get('/services', '\App\Http\Controllers\API\ServicesController@index');
+Route::get('/service/{id}', '\App\Http\Controllers\API\ServicesController@detail');
 
 
