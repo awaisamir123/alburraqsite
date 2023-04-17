@@ -131,7 +131,7 @@ class ServiceController extends Controller
             $image = $request->file('thumbnail');
 
             $imgage="servicesImages/".$service->thumbnail;
-            if (File::exists($imgage)) {
+            if (is_file($imgage)) {
                 unlink($imgage);
             }
 
