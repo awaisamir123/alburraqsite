@@ -78,4 +78,22 @@ class PortfolioController extends Controller
 
 
     }
+
+    public function talentDetail($id) {
+        try {
+            $returnArr['talents']=Talent::orderBy('name')->findOrfail($id);
+
+            return response([
+                'status' => 200,
+                'data' => $returnArr
+            ]);
+        }
+        catch(\Exception $e){
+            return response([
+                'status' => 500,
+                'data' => $e->getMessage()
+            ]);
+        }
+
+    }
 }
