@@ -117,10 +117,10 @@ class ServiceController extends Controller
             $image_resize = Image::make($image->getRealPath());
             //$image_resize->resize(150, 150);
             $image_resize->save(public_path('serviceDetailsImage/'.$filename));
-            $service->thumbnail=$filename;
+            $service->image=$filename;
 
             $imageUrl =  asset(('serviceDetailsImage/' . $filename));
-            $service->thumbnail_url = $imageUrl;
+            $service->image_url = $imageUrl;
         }
         $filename = $service->thumbnail;
         $imageUrl = asset(('serviceDetailsImage/' . $filename));
