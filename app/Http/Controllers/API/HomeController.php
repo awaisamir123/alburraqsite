@@ -12,7 +12,7 @@ class HomeController extends Controller
 {
     public function index() {
         try {
-            $returnArr['portfolio'] = Portfolio::orderBy('created_at', 'desc')->take(6)->get();
+            $returnArr['portfolio'] = Portfolio::with('category')->orderBy('created_at', 'desc')->take(6)->get();
             $returnArr['services'] = Service::orderBy('created_at', 'desc')->take(3)->get();
             $returnArr['testimonial'] = Review::orderBy('created_at', 'desc')->take(10)->get();;
 

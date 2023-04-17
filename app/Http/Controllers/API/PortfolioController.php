@@ -13,10 +13,14 @@ use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
 {
-    public function index()
+    public function index($category = null)
     {
         try {
-            $returnArr['portfolios']=Portfolio::all();
+            $returnArr['portfolios']=Portfolio::where(function ($query) use ($category){
+                if(isset($category)) {
+                    $query->where('category_id', $category);
+                }
+            })->with('tags.tagsName')->get();
             $returnArr['categories']=Category::all();
             $returnArr['tags']=Tag::all();
 

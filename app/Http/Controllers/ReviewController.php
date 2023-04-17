@@ -53,16 +53,18 @@ class ReviewController extends Controller
         $review->comment=trim($request->comment);
         $review->companyname=$request->companyname;
 
+
         if($request->hasFile('image')) {
             $image       = $request->file('image');
+
             $filename = 'f'.time() . '.' . $image->getClientOriginalName();
 
             $image_resize = Image::make($image->getRealPath());
-            // $image_resize->resize(2098, 1500);
-            $image_resize->save(public_path('reviewsimage/'.$filename));
+
+            $image_resize->save(public_path('reviewsimages/'.$filename));
             $review->image=$filename;
 
-            $imageUrl =  asset(('reviewsimage/' . $filename));
+            $imageUrl =  asset(('reviewsimages/' . $filename));
             $review->image_url = $imageUrl;
         }
         $review->save();
@@ -129,11 +131,18 @@ class ReviewController extends Controller
             $image_resize = Image::make($image->getRealPath());
             //$image_resize->resize(150, 150);
             $image_resize->save(public_path('reviewsimages/'.$filename));
-            $review->featuredimage=$filename;
+            $review->image=$filename;
 
             $imageUrl =  asset(('reviewsimages/' . $filename));
             $review->image_url = $imageUrl;
         }
+
+        if($review->image){
+            $filename = $review->image;
+            $imageUrl = asset(('reviewsimages/' . $filename));
+            $review->image_url = $imageUrl;
+        }
+
         $review->update();
 
         Session::flash('message', 'Review Updated Successfully!');

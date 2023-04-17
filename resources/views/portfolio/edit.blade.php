@@ -152,7 +152,7 @@
                                             <div style="margin-top: 20px" class="form-group">
                                                 <label class="control-label col-sm-5" for="email">Featured Image:</label>
                                                 <div class="col-sm-12">
-                                                    <input type="file" class="form-control" name="featuredimage"  id="title" placeholder="Select Featured Image">
+                                                    <input type="file" class="form-control"  name="featuredimage" value="{{old('featuredimage', $portfolio->featuredimage)}}"  src="/portfolioimages/{{$portfolio->featuredimage}}" id="title"   placeholder="Select Featured Image">
                                                     @if ($errors->has('featuredimage'))
                                                         <span style="color: red" class="invalid-feedback" role="alert">
                                                   <strong>{{ $errors->first('featuredimage') }}</strong>

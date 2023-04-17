@@ -103,6 +103,9 @@ class ServiceController extends Controller
             $imageUrl =  asset(('servicesImages/' . $filename));
             $service->thumbnail_url = $imageUrl;
         }
+        $filename = $service->thumbnail;
+        $imageUrl = asset(('servicesImages/' . $filename));
+        $service->thumbnail_url = $imageUrl;
         $service->update();
 
         Session::flash('message', 'Service Updated Successfully!');

@@ -21,12 +21,12 @@ class PortfolioController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('detail','index','talentsIndex');
+        $this->middleware('auth')->except('detail', 'index', 'talentsIndex');
     }
 
     public function portfolioList()
     {
-        $returnArr['portfolios']=Portfolio::latest()->get();
+        $returnArr['portfolios'] = Portfolio::latest()->get();
         return view('portfolio.portfolioList', $returnArr);
     }
 
@@ -35,9 +35,9 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        $returnArr['portfolios']=Portfolio::all();
-        $returnArr['categories']=Category::all();
-        $returnArr['tags']=Tag::all();
+        $returnArr['portfolios'] = Portfolio::all();
+        $returnArr['categories'] = Category::all();
+        $returnArr['tags'] = Tag::all();
         return view('portfolio.index', $returnArr);
     }
 
@@ -46,8 +46,8 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        $returnArr['categories']=Category::all();
-        $returnArr['tags']=Tag::all();
+        $returnArr['categories'] = Category::all();
+        $returnArr['tags'] = Tag::all();
         return view('portfolio.create', $returnArr);
     }
 
@@ -56,42 +56,37 @@ class PortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             /*	        'title'=>'required|min:3|max:30|regex:/^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/',*/
-            'title'=>'required|min:3|max:255|regex:/^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/',
-            'description'=>'required|min:100|max:5000',
-            'description_problem'=>'required|min:100|max:5000',
-            'technologies'=>'required',
-            'category_id'=>'required',
-            'images'=>'required',
-            'featuredimage'=>'required|mimes:jpeg,jpg,png,gif',
+            'title' => 'required|min:3|max:255|regex:/^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/',
+            'description' => 'required|min:100|max:5000',
+            'description_problem' => 'required|min:100|max:5000',
+            'technologies' => 'required',
+            'category_id' => 'required',
+            'images' => 'required',
+            'featuredimage' => 'required|mimes:jpeg,jpg,png,gif',
         ]);
 
 
+        $portfolio = new Portfolio();
+        $portfolio->title = $request->title;
+        $portfolio->description = trim($request->description);
+        $portfolio->description_problem = trim($request->description_problem);
+        $portfolio->category_id = $request->category_id;
 
 
-
-        $portfolio=new Portfolio();
-        $portfolio->title=$request->title;
-        $portfolio->description=trim($request->description);
-        $portfolio->description_problem=trim($request->description_problem);
-        $portfolio->category_id=$request->category_id;
-
-
-        if($request->hasFile('featuredimage')) {
-            $image       = $request->file('featuredimage');
-            $filename = 'f'.time() . '.' . $image->getClientOriginalName();
+        if ($request->hasFile('featuredimage')) {
+            $image = $request->file('featuredimage');
+            $filename = 'f' . time() . '.' . $image->getClientOriginalName();
 
             $image_resize = Image::make($image->getRealPath());
             // $image_resize->resize(2098, 1500);
-            $image_resize->save(public_path('portfolioimages/'.$filename));
-            $portfolio->featuredimage=$filename;
+            $image_resize->save(public_path('portfolioimages/' . $filename));
+            $portfolio->featuredimage = $filename;
 
-            $imageUrl =  asset(('portfolioimages/' . $filename));
+            $imageUrl = asset(('portfolioimages/' . $filename));
             $portfolio->image_url = $imageUrl;
         }
-
-
 
 
         $portfolio->save();
@@ -107,28 +102,28 @@ class PortfolioController extends Controller
         $pimg->save();*/
 
 
-        if($request->hasFile('images')) {
+        if ($request->hasFile('images')) {
 
             foreach ($request->images as $img) {
 
                 $destinationPath = 'portfolioimages';
                 $filename = time() . '.' . $img->getClientOriginalName();
                 $img->move($destinationPath, $filename);
-                $pimg=new Pimages();
-                $pimg->image=$filename;
-                $pimg->portfolio_id=$portfolio->id;
+                $pimg = new Pimages();
+                $pimg->image = $filename;
+                $pimg->portfolio_id = $portfolio->id;
                 $pimg->save();
 
             }
         }
 
-        if($request->has('technologies')) {
+        if ($request->has('technologies')) {
 
             foreach ($request->technologies as $tech) {
 
-                $ptech=new Ptags();
-                $ptech->name=$tech;
-                $ptech->portfolio_id=$portfolio->id;
+                $ptech = new Ptags();
+                $ptech->name = $tech;
+                $ptech->portfolio_id = $portfolio->id;
                 $ptech->save();
 
 
@@ -152,14 +147,14 @@ class PortfolioController extends Controller
     }
 
 
-    public function detail($title,$id)
+    public function detail($title, $id)
     {
-        $portfolio= Portfolio::findOrfail($id);
+        $portfolio = Portfolio::findOrfail($id);
         $nextPortfolio = Portfolio::where('id', '>', $id)->first();
         $previousPortfolio = Portfolio::where('id', '<', $id)->first();
 
 
-        return view('portfolio.show',compact('nextPortfolio','portfolio','previousPortfolio'));
+        return view('portfolio.show', compact('nextPortfolio', 'portfolio', 'previousPortfolio'));
     }
 
     /**
@@ -167,11 +162,11 @@ class PortfolioController extends Controller
      */
     public function edit(string $id)
     {
-        $returnArr['categories']= Category::all();
-        $returnArr['tags']= Tag::all();
-        $returnArr['portfolio']= Portfolio::findOrfail($id);
-        $returnArr['tag']=Tag::all()->pluck('id');
-        return view('portfolio.edit',$returnArr);
+        $returnArr['categories'] = Category::all();
+        $returnArr['tags'] = Tag::all();
+        $returnArr['portfolio'] = Portfolio::findOrfail($id);
+        $returnArr['tag'] = Tag::all()->pluck('id');
+        return view('portfolio.edit', $returnArr);
 
     }
 
@@ -182,53 +177,60 @@ class PortfolioController extends Controller
     {
         $validator = Validator::make($request->all(),
             [
-                'title'=>'required|min:3|max:20|regex:/^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/',
-                'description'=>'required|min:50|max:5000',
+                'title' => 'required|min:3|max:20|regex:/^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/',
+                'description' => 'required|min:50|max:5000',
                 // 'description_problem'=>'required|min:50|max:5000',
-                'technologies'=>'required',
-                'category_id'=>'required',
+                'technologies' => 'required',
+                'category_id' => 'required',
             ]);
 
-        if($validator->fails()){
+        if ($validator->fails()) {
             $message = $validator->errors()->first();
-            Session::flash('info', " $message") ;
+            Session::flash('info', " $message");
             return Redirect::back()->withErrors($validator)->withInput();
         } else {
 
 
-            $portfolio= Portfolio::findOrfail($id);
-            // dd($portfolio);
+            $portfolio = Portfolio::findOrfail($id);
 
-            $portfolio->title=$request->title;
-            $portfolio->description=trim($request->description);
-            $portfolio->description_problem=trim($request->description_problem);
-            $portfolio->category_id=$request->category_id;
 
-            if($request->hasFile('featuredimage')) {
+            $portfolio->title = $request->title;
+            $portfolio->description = trim($request->description);
+            $portfolio->description_problem = trim($request->description_problem);
+            $portfolio->category_id = $request->category_id;
+
+
+
+            if ($request->hasFile('featuredimage')) {
                 $image = $request->file('featuredimage');
 
-                $imgage="portfolioimages/".$portfolio->featuredimage;
-                if (File::exists($imgage)) {
+                $imgage = "portfolioimages/" . $portfolio->featuredimage;
+
+                if (is_file($imgage)) {
                     unlink($imgage);
                 }
 
-                $filename = 'f'.time() . '.' . $image->getClientOriginalName();
+                $filename = 'f' . time() . '.' . $image->getClientOriginalName();
 
                 $image_resize = Image::make($image->getRealPath());
                 //$image_resize->resize(150, 150);
-                $image_resize->save(public_path('portfolioimages/'.$filename));
-                $portfolio->featuredimage=$filename;
+                $image_resize->save(public_path('portfolioimages/' . $filename));
+                $portfolio->featuredimage = $filename;
 
-                $imageUrl =  asset(('portfolioimages/' . $filename));
+
+                $imageUrl = asset(('portfolioimages/' . $filename));
+
                 $portfolio->image_url = $imageUrl;
             }
-
+                $filename = $portfolio->featuredimage;
+                $imageUrl = asset(('portfolioimages/' . $filename));
+                $portfolio->image_url = $imageUrl;
             $portfolio->update();
 
-            if($request->hasFile('images')) {
-                foreach($portfolio->images()->get() as $img){
+            if ($request->hasFile('images')) {
+                foreach ($portfolio->images()->get() as $img) {
 
-                    $imgage="portfolioimages/".$img->image;
+                    $imgage = "portfolioimages/" . $img->image;
                     if (File::exists($imgage)) {
                         unlink($imgage);
                     }
@@ -237,30 +239,29 @@ class PortfolioController extends Controller
                 }
 
 
-
                 foreach ($request->images as $img) {
                     $destinationPath = 'portfolioimages';
                     $filename = time() . '.' . $img->getClientOriginalName();
                     $img->move($destinationPath, $filename);
-                    $pimg=new Pimages();
-                    $pimg->image=$filename;
-                    $pimg->portfolio_id=$portfolio->id;
+                    $pimg = new Pimages();
+                    $pimg->image = $filename;
+                    $pimg->portfolio_id = $portfolio->id;
                     $pimg->save();
 
                 }
             }
 
-            if($request->has('technologies')) {
-                foreach($portfolio->tags()->get() as $tg){
+            if ($request->has('technologies')) {
+                foreach ($portfolio->tags()->get() as $tg) {
                     $tg->delete();
                 }
 
 
                 foreach ($request->technologies as $tech) {
 
-                    $ptech=new Ptags();
-                    $ptech->name=$tech;
-                    $ptech->portfolio_id=$portfolio->id;
+                    $ptech = new Ptags();
+                    $ptech->name = $tech;
+                    $ptech->portfolio_id = $portfolio->id;
                     $ptech->save();
 
 
@@ -269,8 +270,6 @@ class PortfolioController extends Controller
             }
 
         }
-
-
 
 
         Session::flash('message', 'Portfolio Updated Successfully!');
@@ -285,11 +284,11 @@ class PortfolioController extends Controller
      */
     public function destroy(string $id)
     {
-        $portfolio= Portfolio::findOrfail($id);
+        $portfolio = Portfolio::findOrfail($id);
 
         foreach ($portfolio->images()->get() as $image) {
 
-            $img="portfolioimages/".$image->image;
+            $img = "portfolioimages/" . $image->image;
             if (File::exists($img)) {
                 unlink($img);
             }
@@ -305,9 +304,9 @@ class PortfolioController extends Controller
 
     public function talentsIndex()
     {
-        $talents=Talent::orderBy('name')->get();
-        $stacks=Stack::all();
-        $tStacks=Tstack::all();
-        return view('talents.index', compact('talents','stacks','tStacks'));
+        $talents = Talent::orderBy('name')->get();
+        $stacks = Stack::all();
+        $tStacks = Tstack::all();
+        return view('talents.index', compact('talents', 'stacks', 'tStacks'));
     }
 }
