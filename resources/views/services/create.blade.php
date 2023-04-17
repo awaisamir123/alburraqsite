@@ -77,7 +77,19 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-5" for="email"> Thumbnail:</label>
                                                 <div class="col-sm-12">
-                                                    <input type="file" class="form-control " name="image"  id="image" placeholder="Select  Image" required>
+                                                    <input type="file" class="form-control " name="thumbnail"  id="thumbnail" placeholder="Select  thumbnail" required>
+                                                    @if ($errors->has('thumbnail'))
+                                                        <span style="color: red" class="invalid-feedback" role="alert">
+                                                  <strong>{{ $errors->first('thumbnail') }}</strong>
+                                                </span>
+                                                    @endif
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-5" for="email"> Image :</label>
+                                                <div class="col-sm-12">
+                                                    <input type="file" class="form-control " name="image"  id="image" placeholder="Select  Image" >
                                                     @if ($errors->has('image'))
                                                         <span style="color: red" class="invalid-feedback" role="alert">
                                                   <strong>{{ $errors->first('image') }}</strong>

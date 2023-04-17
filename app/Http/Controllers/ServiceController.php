@@ -40,8 +40,8 @@ class ServiceController extends Controller
             $service->design=trim($request->design);
             $service->development=trim($request->development);
 
-            if($request->hasFile('image')) {
-                $image       = $request->file('image');
+            if($request->hasFile('thumbnail')) {
+                $image       = $request->file('thumbnail');
                 $filename = 'f'.time() . '.' . $image->getClientOriginalName();
 
                 $image_resize = Image::make($image->getRealPath());
@@ -51,6 +51,25 @@ class ServiceController extends Controller
 
                 $imageUrl =  asset(('servicesImages/' . $filename));
                 $service->thumbnail_url = $imageUrl;
+            }
+
+
+
+            if($request->hasFile('image')) {
+
+                $image       = $request->file('image');
+
+                $filename = 'f'.time() . '.' . $image->getClientOriginalName();
+
+                $image_resize = Image::make($image->getRealPath());
+
+                // $image_resize->resize(2098, 1500);
+                $image_resize->save(public_path('serviceDetailsImage/'.$filename));
+
+                $service->image=$filename;
+
+                $imageUrl =  asset(('serviceDetailsImages/' . $filename));
+                $service->image = $imageUrl;
             }
 
             $service->save();
@@ -88,6 +107,29 @@ class ServiceController extends Controller
         if($request->hasFile('image')) {
             $image = $request->file('image');
 
+            $imgage="serviceDetailsImage/".$service->image;
+            if (File::exists($imgage)) {
+                unlink($imgage);
+            }
+
+            $filename = 'f'.time() . '.' . $image->getClientOriginalName();
+
+            $image_resize = Image::make($image->getRealPath());
+            //$image_resize->resize(150, 150);
+            $image_resize->save(public_path('serviceDetailsImage/'.$filename));
+            $service->thumbnail=$filename;
+
+            $imageUrl =  asset(('serviceDetailsImage/' . $filename));
+            $service->thumbnail_url = $imageUrl;
+        }
+        $filename = $service->thumbnail;
+        $imageUrl = asset(('serviceDetailsImage/' . $filename));
+        $service->image = $imageUrl;
+
+
+        if($request->hasFile('thumbnail')) {
+            $image = $request->file('thumbnail');
+
             $imgage="servicesImages/".$service->thumbnail;
             if (File::exists($imgage)) {
                 unlink($imgage);
@@ -103,9 +145,7 @@ class ServiceController extends Controller
             $imageUrl =  asset(('servicesImages/' . $filename));
             $service->thumbnail_url = $imageUrl;
         }
-        $filename = $service->thumbnail;
-        $imageUrl = asset(('servicesImages/' . $filename));
-        $service->thumbnail_url = $imageUrl;
+
         $service->update();
 
         Session::flash('message', 'Service Updated Successfully!');
