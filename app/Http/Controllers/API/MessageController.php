@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Models\Message;
+use App\Models\newsletter;
 use App\Models\User;
 use App\Notifications\ContactMessage;
 use Illuminate\Http\Request;
@@ -48,5 +49,30 @@ class MessageController extends Controller
             'status' => 200,
             'message' => 'Message has been sent'
         ]);
+    }
+
+    public function saveNewsletter(Request $request){
+        try {
+            $this->validate($request, [
+
+                'email' => 'required',
+
+            ]);
+
+            $newsletter = new newsletter();
+            $newsletter->email = $request->email;
+            $newsletter->save();
+            return response([
+                'status' => 200,
+                'data' => 'Newsletter Send'
+            ]);
+        }
+        catch(\Exception $e) {
+            return response([
+                'status' => 500,
+                'data' => $e->getMessage()
+            ]);
+        }
+
     }
 }

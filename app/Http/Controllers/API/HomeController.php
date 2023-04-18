@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
+use App\Models\Message;
+use App\Models\newsletter;
 use App\Models\Portfolio;
 use App\Models\Review;
 use App\Models\Service;
@@ -29,4 +31,6 @@ class HomeController extends Controller
         }
 
     }
+
+
 }
