@@ -24,7 +24,7 @@ Route::get('/portfolio-detail/{title}/{id}','\App\Http\Controllers\API\Portfolio
 Route::get('/our-talent-showcase','\App\Http\Controllers\API\PortfolioController@talentsIndex');
 Route::get('/talent-details/{id}','\App\Http\Controllers\API\PortfolioController@talentDetail');
 Route::post('/message','\App\Http\Controllers\API\MessageController@message');
-Route::post('/newsletters','\App\Http\Controllers\API\MessageController@message');
+Route::post('/newsletters','\App\Http\Controllers\API\MessageController@saveNewsletter');
 Route::get('/services', '\App\Http\Controllers\API\ServicesController@index');
 Route::get('/services/{id}', '\App\Http\Controllers\API\ServicesController@detail');
 
