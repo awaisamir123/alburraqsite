@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\Message;
-use App\Models\newsletter;
+use App\Models\Newsletter;
 use App\Models\User;
 use App\Notifications\ContactMessage;
 use Illuminate\Http\Request;
@@ -35,7 +35,7 @@ class MessageController extends Controller
         try {
             $admin = User::where('email', 'ali@al-burraq.com')->first();
             $admin->notify($emailNotification);
-        } catch (Exception $e) {
+        } catch (\ Exception $e) {
             return response([
                 'status' => 500,
                 'data' => $e->getMessage()
@@ -59,7 +59,7 @@ class MessageController extends Controller
 
             ]);
 
-            $newsletter = new newsletter();
+            $newsletter = new Newsletter();
             $newsletter->email = $request->email;
             $newsletter->save();
             return response([
