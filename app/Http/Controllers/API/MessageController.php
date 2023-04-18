@@ -35,7 +35,7 @@ class MessageController extends Controller
         try {
             $admin = User::where('email', 'ali@al-burraq.com')->first();
             $admin->notify($emailNotification);
-        } catch (\ Exception $e) {
+        } catch (\Exception $e) {
             return response([
                 'status' => 500,
                 'data' => $e->getMessage()
