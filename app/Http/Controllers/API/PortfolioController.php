@@ -61,7 +61,7 @@ class PortfolioController extends Controller
     {
         try {
 
-            $returnArr['talents']=Talent::orderBy('name')->get();
+            $returnArr['talents']=Talent::with('stacks')->orderBy('name')->get();
             $returnArr['stacks']=Stack::all();
             $returnArr['tStacks']=Tstack::all();
             return response([
