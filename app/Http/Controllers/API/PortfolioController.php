@@ -41,7 +41,7 @@ class PortfolioController extends Controller
 
     public function detail($id){
         try {
-            $returnArr['portfolio']= Portfolio::findOrfail($id);
+            $returnArr['portfolio']= Portfolio::with('category')->findOrfail($id);
             $returnArr['nextPortfolio'] = Portfolio::where('id', '>', $id)->first();
             $returnArr['previousPortfolio'] = Portfolio::where('id', '<', $id)->first();
             return response([
