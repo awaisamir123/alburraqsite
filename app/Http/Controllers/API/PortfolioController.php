@@ -39,7 +39,7 @@ class PortfolioController extends Controller
 
     }
 
-    public function detail($title, $id){
+    public function detail($id){
         try {
             $returnArr['portfolio']= Portfolio::findOrfail($id);
             $returnArr['nextPortfolio'] = Portfolio::where('id', '>', $id)->first();
