@@ -34,6 +34,9 @@
 
     <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
 
+
+    <script src="{{ asset('assets/js/jquery.lazyload.js') }}"></script>
+
     <script src="{{ asset('assets/js/bootstrap/bootstrap.min.js') }}"></script>
 
     <script src="{{ asset('assets/js/pace.min.js') }}"></script>

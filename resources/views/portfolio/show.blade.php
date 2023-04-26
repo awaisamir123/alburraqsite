@@ -32,6 +32,11 @@
       margin-bottom: 70px;
     }
 </style>
+<script>
+   $(document).ready(function(){
+    $('img').lazyload();
+   });
+</script>
     <!--  Page Content  -->
     <!--  Page Content  -->
     <div id="page-content">
