@@ -16,7 +16,7 @@ class HomeController extends Controller
         try {
             $returnArr['portfolio'] = Portfolio::with('category')->orderBy('created_at', 'desc')->take(6)->get();
             $returnArr['services'] = Service::whereIn('title', ['Softwate Design & Development', 'Mobile App Development', 'Web Design & Development'])->take(3)->get();
-            $returnArr['testimonial'] = Review::orderBy('created_attt', 'desc')->take(10)->get();;
+            $returnArr['testimonial'] = Review::orderBy('created_at', 'desc')->take(10)->get();;
 
             return response([
                 'status' => 200,
