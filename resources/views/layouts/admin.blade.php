@@ -718,12 +718,12 @@
                                 </a>
                             </li>
 
-{{--                            <li class="site-menu-item has-sub">--}}
-{{--                                <a href="{{route('talent.list')}}">--}}
-{{--                                    <i class="far fa-comments site-menu-icon  " aria-hidden="true"></i>--}}
-{{--                                    <span class="site-menu-title">Talents</span>--}}
-{{--                                </a>--}}
-{{--                            </li>--}}
+                            <li class="site-menu-item has-sub">
+                                <a href="{{route('talent.list')}}">
+                                    <i class="fas fa-users site-menu-icon" aria-hidden="true"></i>
+                                    <span class="site-menu-title">Talents</span>
+                                </a>
+                            </li>
 
                          @endif
 

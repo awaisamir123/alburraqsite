@@ -23,7 +23,7 @@
                                         <div class="col-sm-6">
 
                                             <div class="form-group">
-                                                <label class="control-label col-sm-5" for="email">Name:</label>
+                                                <label class="control-label col-sm-5" for="name">Name:</label>
                                                 <div class="col-sm-12">
                                                     <input type="text" class="form-control " name="name" id="name"  required
                                                     placeholder="Enter Person Name" value="{{ old('name') }}">

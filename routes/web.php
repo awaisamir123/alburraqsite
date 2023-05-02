@@ -148,12 +148,12 @@ Route::group(['prefix' => 'admin',  'middleware' => ['adminAuth','auth']],functi
     Route::delete('destroy-portfolio/{id}','\App\Http\Controllers\PortfolioController@destroy')->name('portfolio.destroy');
 
 // Talent
-//    Route::get('talent-list','\App\Http\Controllers\TalentController@talentList')->name('talent.list');
-//    Route::get('create-talent','\App\Http\Controllers\TalentController@create')->name('talent.create');
-//    Route::post('save-talent','\App\Http\Controllers\TalentController@store')->name('talent.store');
-//    Route::get('edit-talent/{id}','\App\Http\Controllers\TalentController@edit')->name('talent.edit');
-//    Route::patch('update-talent/{id}','\App\Http\Controllers\TalentController@update')->name('talent.update');
-//    Route::delete('destroy-talent/{id}','\App\Http\Controllers\TalentController@destroy')->name('talent.destroy');
+    Route::get('talent-list','\App\Http\Controllers\TalentController@talentList')->name('talent.list');
+    Route::get('create-talent','\App\Http\Controllers\TalentController@create')->name('talent.create');
+    Route::post('save-talent','\App\Http\Controllers\TalentController@store')->name('talent.store');
+    Route::get('edit-talent/{id}','\App\Http\Controllers\TalentController@edit')->name('talent.edit');
+    Route::patch('update-talent/{id}','\App\Http\Controllers\TalentController@update')->name('talent.update');
+    Route::delete('destroy-talent/{id}','\App\Http\Controllers\TalentController@destroy')->name('talent.destroy');
 
 
     //message
